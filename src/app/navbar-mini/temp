@@ -1,0 +1,51 @@
+<div style="width: 12rem; height: 15.5rem; border: none;" class="card shop-card " id="one">
+                            <li><b>Shop Layout</b></li>
+                            <li>Filter left siderbar</li>
+                            <li> Filter right sidebar</li>
+                            <li>Canvas sidebar</li>
+                            <li>Dropdown sidebar</li>
+                            <li>Grid 2 columns</li>
+                            <li>Grid 3 coulmns </li>
+
+                        </div>
+                        <div style="width: 12rem; height: 15.5rem; border: none;" class="card shop-card " id="two">
+                            <li><b>Shop page</b></li>
+                            <li>Collection list</li>
+                            <li>Collection list 2</li>
+                            <li>Pagination page</li>
+                            <li>Load more button</li>
+                            <li>Infinite scrolling</li>
+                        </div>
+                        <div style="width: 12rem; height: 15.5rem; border: none;" class="card three">
+                            <li><b>Shop page</b></li>
+                            <li>Collection list</li>
+                            <li>Collection list 2</li>
+                            <li>Pagination page</li>
+                            <li>Load more button</li>
+                            <li>Infinite scrolling</li>
+                        </div>
+                        <div style="width: 12rem; height: 15.5rem; border: none;" class="card four">
+                            <li><b>Shop page</b></li>
+                            <li>Collection list</li>
+                            <li>Collection list 2</li>
+                            <li>Pagination page</li>
+                            <li>Load more button</li>
+                            <li>Infinite scrolling</li>
+                        </div>
+
+                        <div style="width: 12rem; height: 15.5rem; border: none;" class="card five">
+                            <li><b>Shop page</b></li>
+                            <li>Collection list</li>
+                            <li>Collection list 2</li>
+                            <li>Pagination page</li>
+                            <li>Load more button</li>
+                            <li>Infinite scrolling</li>
+                        </div>
+                        <div style="width: 12rem; height: 15.5rem; border: none;" class="card six">
+                            <li><b>Shop page</b></li>
+                            <li>Collection list</li>
+                            <li>Collection list 2</li>
+                            <li>Pagination page</li>
+                            <li>Load more button</li>
+                            <li>Infinite scrolling</li>
+                        </div>

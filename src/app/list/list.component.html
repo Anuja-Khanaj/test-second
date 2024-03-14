@@ -1,0 +1,96 @@
+<div class="container">
+    <h2>Address Information</h2>
+    <table class="table ">
+      <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Phone Number</th>
+            <th>GST Number</th>
+            <th>PAN Number</th>
+            <th>Lane 1</th>
+            <th>Lane 2</th>
+            <th>City</th>
+            <th>District</th>
+            <th>State</th>
+            <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>abc</td>
+          <td>a</td>
+          <td>9876543210</td>
+          <td>987654321012</td>
+          <td>7654321012</td>
+          <td>xyz</td>
+          <td>xyz2</td>
+          <td>ich</td>
+          <td>klp</td>
+          <td>mah</td>
+          <td>India</td>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>a</td>
+            <td>9876543210</td>
+            <td>987654321012</td>
+            <td>7654321012</td>
+            <td>xyz</td>
+            <td>xyz2</td>
+            <td>ich</td>
+            <td>klp</td>
+            <td>mah</td>
+            <td>India</td>
+          </tr>
+          <tr>
+            <td>abc</td>
+            <td>a</td>
+            <td>9876543210</td>
+            <td>987654321012</td>
+            <td>7654321012</td>
+            <td>xyz</td>
+            <td>xyz2</td>
+            <td>ich</td>
+            <td>klp</td>
+            <td>mah</td>
+            <td>India</td>
+          </tr>
+          <tr>
+            <td>abc</td>
+            <td>a</td>
+            <td>9876543210</td>
+            <td>987654321012</td>
+            <td>7654321012</td>
+            <td>xyz</td>
+            <td>xyz2</td>
+            <td>ich</td>
+            <td>klp</td>
+            <td>mah</td>
+            <td>India</td>
+          </tr>
+          <tr>
+            <td>{{Name}}</td>
+            <td>{{Value}}</td>
+            <td>{{formData.MobileNo}}</td>
+            <td>{{formData.GSTNo}}</td>
+            <td>{{formData.PAN}}</td> 
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.lane1}}</div></td>
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.lane2}}</div></td>
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.city}}</div></td>
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.district}}</div></td>
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.state}}</div></td>
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.country}}</div></td>
+                <tr *ngIf="length>1">
+              <ng-container *ngFor="let Address of formData.addresses" >
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.lane1}}</div></td>
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.lane2}}</div></td>
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.city}}</div></td>
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.district}}</div></td>
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.state}}</div></td>
+                <td>  <div *ngFor="let Address of formData.addresses">{{Address.country}}</div></td>
+              </ng-container>
+            </tr>
+      </tbody>
+    </table>
+  </div>

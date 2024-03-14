@@ -1,0 +1,53 @@
+.radio{
+    display: flex;
+    gap: 20px;
+}
+
+.container{
+    width: 50%;
+
+}
+
+.addr{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.addr .form-group{
+    width: 70%;
+}
+
+small{
+    color: red;
+}
+
+small, p{
+    color: #C1272D;
+    cursor: pointer;
+}
+
+input.ng-invalid.ng-touched{
+    border: #C1272D 2px solid;
+  }
+ 
+  
+  .form.VALID{
+    border: green 3px solid;
+  }
+  .form.INVALID{
+    border: #C1272D 3px solid;
+  }
+  .form.PENDING{
+    border: pink 3px solid;
+  }
+  
+   input .ng-invalid, .ng-touched{
+    border: 1px #C1272D;
+  }
+  
+  input .ng-pending{
+    border: 1px yellow;
+  }
+
+

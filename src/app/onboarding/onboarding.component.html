@@ -1,0 +1,150 @@
+<div class="container mt-5">
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div class=" radio form-group">
+      <input type="radio" id="optionA" name="options" (click)="clikedA()" value="A">
+      <label for="option">Option A</label>
+
+      <input type="radio" id="optionB" name="options" (click)="clikedB()" value="B">
+      <label for="option">Option B:</label>
+
+      <input type="radio" id="optionC" name="options" (click)="clikedC()" value="C">
+      <label for="option">Option C:</label>
+    </div>
+
+    <div class="d-flex" style="gap: 20px;" *ngIf="isdisplayA == true">
+
+      <div class="form-group">
+        <label for="Name">AName:</label>
+        <input type="text" class="form-control" formControlName="AName">
+        <small *ngIf="reactiveForm.get('Name').invalid && reactiveForm.get('AName').touched">
+          *This field is required
+        </small>
+      </div>
+
+
+      <div class="form-group">
+        <label for="Value">AValue:</label>
+        <input type="text" class="form-control" formControlName="AValue">
+        <small *ngIf="reactiveForm.get('AValue').invalid && reactiveForm.get('AValue').touched">
+          *This field is required
+        </small>
+      </div>
+    </div>
+    
+    <div class="d-flex" style="gap: 20px;" *ngIf="isdisplayC == true">
+
+      <div class="form-group">
+        <label for="Name">CName:</label>
+        <input type="text" class="form-control" formControlName="CName">
+        <small *ngIf="reactiveForm.get('CName').invalid && reactiveForm.get('CName').touched">
+          *This field is required
+        </small>
+      </div>
+
+
+      <div class="form-group">
+        <label for="Value">CValue:</label>
+        <input type="text" class="form-control" formControlName="CValue">
+        <small *ngIf="reactiveForm.get('CValue').invalid && reactiveForm.get('CValue').touched">
+          *This field is required
+        </small>
+      </div>
+    </div>
+    
+   
+    <div class="d-flex" style="gap: 20px;" *ngIf="isdisplayB == true">
+
+      <div class="form-group">
+        <label for="Name">BName:</label>
+        <input type="text" class="form-control" formControlName="BName">
+        <small *ngIf="reactiveForm.get('BName').invalid && reactiveForm.get('BName').touched">
+          *This field is required
+        </small>
+      </div>
+
+
+      <div class="form-group">
+        <label for="Value">BValue:</label>
+        <input type="text" class="form-control" formControlName="BValue">
+        <small *ngIf="reactiveForm.get('BValue').invalid && reactiveForm.get('BValue').touched">
+          *This field is required
+        </small>
+      </div>
+    </div>
+
+
+ <div class="d-flex" style="gap:10px;">
+  <div class="form-group">
+    <label>Mobile Number:</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">+91</span>
+      </div>
+      <input type="text" class="form-control" formControlName="MobileNo">
+    </div>
+    <small *ngIf="reactiveForm.get('MobileNo').invalid && reactiveForm.get('MobileNo').touched">
+      *Please enter a valid mobile number
+    </small>
+  </div>
+
+
+  <div class="form-group">
+    <label for="GSTNo">GST No:</label>
+    <input type="text" class="form-control" formControlName="GSTNo">
+    <small *ngIf="reactiveForm.get('GSTNo').invalid && reactiveForm.get('GSTNo').touched">
+      *This field is required
+    </small>
+  </div>
+
+
+  <div class="form-group">
+    <label for="PAN">PAN:</label>
+    <input type="text" class="form-control" formControlName="PAN" readonly>
+    <small *ngIf="reactiveForm.get('PAN').invalid && reactiveForm.get('PAN').touched">
+      *This field is required
+    </small>
+  </div>
+</div>
+
+    <div formArrayName="addresses">
+
+      <div class="addr mb-5" *ngFor="let address of reactiveForm.get('addresses')['controls']; let i=index"
+        class="address" [formGroupName]="i">
+        <div class="form-group">
+          <label>Lane 1</label>
+          <input type="text" class="form-control" formControlName="lane1">
+        </div>
+        <div class="form-group">
+          <label>Lane 2 </label>
+          <input type="text" class="form-control" formControlName="lane2">
+        </div>
+        <div class="d-flex mb-3" style="gap: 5px;">
+          <div class="form-group">
+            <label for="city{{i}}">City:</label>
+            <input type="text" class="form-control" formControlName="city">
+          </div>
+          <div class="form-group">
+            <label for="district{{i}}">District:</label>
+            <input type="text" class="form-control" formControlName="district">
+          </div>
+          <div class="form-group">
+            <label for="state{{i}}">State:</label>
+            <input type="text" class="form-control" formControlName="state">
+          </div>
+          <div class="form-group">
+            <label for="country{{i}}">Country:</label>
+            <input type="text" class="form-control" formControlName="country">
+          </div>
+          <div class="form-group">
+            <label for="pincode{{i}}">Pincode:</label>
+            <input type="text" class="form-control" formControlName="pincode">
+          </div>
+        </div>
+        <button type="button" class="btn btn-danger mb-3" (click)="removeAddress(i)">Remove Address</button>
+      </div>
+      <button type="button" class="btn btn-primary mt-3" (click)="addAddress()">Add Address</button>
+    </div>
+
+    <button type="submit" [disabled]="reactiveForm.invalid"   class="btn btn-primary my-3">Submit</button>
+  </form>
+</div>

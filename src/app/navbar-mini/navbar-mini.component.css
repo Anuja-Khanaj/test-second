@@ -1,0 +1,93 @@
+li{
+    list-style: none;
+}
+nav{
+    background-color: white;
+}
+nav .nav-item{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+ .nav-item:hover{
+    color: #cb0f09;;
+}
+
+.subnav{
+    position: absolute;
+    z-index: 1;
+background-color: white;
+padding: 10px;
+line-height: 2.5rem;
+margin-top: 0.5rem;
+border-radius: 5px;
+background-color: white;
+/* height: auto; */
+}
+
+.home {
+    width: max-content;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    margin-top: 0.5rem;
+    background-color:  rgb(245, 244, 244) ;   
+    padding: 5px;
+}
+
+.homeCards{
+    margin: 0.5rem 0;
+    box-shadow: rgba(246, 246, 246, 0.324)  5px 5px;
+}
+
+i:hover{
+    cursor: pointer;
+}
+
+img{
+    border-radius: 1rem;
+    padding: 10px;
+    height: 12rem;
+}
+
+img:hover{
+   padding: 12px;
+   transform: 1s; 
+}
+
+#shop{
+    display: flex;
+    gap:2rem;
+    position: absolute;
+    left: 20%;
+    z-index: 1;
+}
+
+.shop-card{
+    line-height: 2.1rem;
+    width: 100%;
+    height: fit-content;
+    border: none;
+}
+.picOne,.picTwo{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-image: url("./../../assets/prod.avif");
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+p {
+   background-color: white;
+   padding:0.5rem 2rem ;
+   margin:10px;
+}
+
+#prod{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 4%;
+}
